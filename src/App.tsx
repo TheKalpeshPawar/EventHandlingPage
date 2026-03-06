@@ -189,6 +189,9 @@ const Registration = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     alert(`Thank you for registering, ${formData.name}! See you at TechSummit'26.`);
+    // Redirect to home screen (top of the page)
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setFormData({ name: '', email: '', college: '', event: 'technical' });
   };
 
   return (
